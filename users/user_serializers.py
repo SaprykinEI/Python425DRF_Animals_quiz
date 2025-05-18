@@ -8,6 +8,7 @@ from users.validators import PasswordValidator
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
+        model = User
         fields = ['id', 'email', 'first_name', 'last_name', 'phone', 'is_active']
 
 
