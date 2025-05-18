@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'redis',
 
     #user apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -102,8 +103,6 @@ USER = os.getenv("MS_SQL_USER")
 PASSWORD = os.getenv("MS_SQL_KEY")
 HOST = os.getenv("MS_SQL_SERVER")
 DATABASE = os.getenv("MS_SQL_DATABASE")
-
-# База данных, для выполнения команды на создание БД
 PAD_DATABASE = os.getenv("MS_PAD_DATABASE")
 DRIVER = os.getenv("MS_SQL_DRIVER")
 
@@ -165,7 +164,7 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
 
 cache_status = os.getenv('CACHE_STATUS')
 CACHE_ENABLED = True if cache_status == 'True' else False
