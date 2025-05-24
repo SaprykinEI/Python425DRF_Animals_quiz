@@ -29,6 +29,6 @@ urlpatterns = [
     path(p.join(section), SectionListAPIView.as_view(), name='section_list'),
     path(p.join(section, create), SectionCreateAPIView.as_view(), name='section_create'),
     path(p.join(section, int_pk), SectionRetrieveAPIView.as_view(), name='section_detail'),
-    path(p.join(section, update), SectionUpdateAPIView.as_view(), name='section_update'),
-    path(p.join(section, delete), SectionDestroyAPIView.as_view(), name='section_destroy'),
+    path(p.join(section, int_pk, update), SectionUpdateAPIView.as_view(), name='section_update'),
+    path(p.join(section, int_pk, delete), SectionDestroyAPIView.as_view(), name='section_destroy'),
 ] + router.urls
